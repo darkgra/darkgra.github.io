@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[换电脑了 看看能不能]]></title>
-    <url>%2F2019%2F04%2F19%2F%E6%90%9E%E7%AC%91%E5%9B%BE%E9%9B%86%2F</url>
-    <content type="text"><![CDATA[还是不能本地上传吗 本兽的QQ: &nbsp; 3014532068 在配置文件中加上该选择器的样式就能写html了，不能嵌套吗]]></content>
+    <title><![CDATA[webpack项目]]></title>
+    <url>%2F2019%2F05%2F06%2Fwebpack%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[这是一个基于webpack搭建的vue手机商城项目第一步 ~~ 项目前准备和文件配置-1-下载项目需要用到的三方依赖和插件vue全家桶;ui组件库mui,mint-ui;各种文件对应的loader；webpack打包工具；以及用webpack-dev-server来自动保存打包由于要在我自己手机上进行测试和书写方便，需要配置下package.json文件。-2-编写webpack的配置文件，基于webpack一切皆模块的思想，每当出现新类型文件，就需要配置loader 第二步 ~~ 对项目进行构建-1-把app组件界面分为3个部分，顶部使用mint-ui的header，在入口文件中导入引用就好，底部的导航用mui中的tabber，在入口文件中导入样式，把代码复制到app组件中把a标签改成router-link连接路由，而中间放这些组件就可以了，但是后期需要动画，就如下写。123&lt;transition&gt; &lt;router-view&gt;&lt;/router-view&gt;&lt;/transition&gt; -2-进来时app组件的根路由直接改成home组件，home组件上面为mint-ui轮播图，图片数据用vue-resource请求，入口文件导入引用resource，下面为mui九宫格。以后无非是组件的切换了和细节的完善，整个项目构建完了。 第三步 ~~ home组件后续的各个组件和路由配置-1-入口文件导入vue-router，vue实列中挂载和引用router.js的暴露，在router.js中导入各个组件进行路由和组件的匹配； 2-各个组件的编写 1.实现点击home组件的小米手机，出现一系列小米手机图片价格参考，其实就是Home组件的子路由匹配一个组件。 2.实现点击子组件的图片，出现该款手机的具体参数，且在里面添加购买功能，点击购买产品添加至购物车组件。第四步 ~~ 购物组件和后续的完善-购物车组件的编写-1.不同组件通过vuex来实现数据共享，为了实现数据持久化配合localstroage，入口文件导入挂载vuex，购物车组件取出vuex中的数据进行编写，在这里用v-if来实现当用户添加进来了，就切换到另一个组件。2.实现，商品的数量控制，商品的删除，是非购买的选项，总价的动态计算。 完善 1.不同组件的切换，编写css实现动画滑动效果。 2.底部导航条可以换好看的字体图标。 3.代码上传github,编写自己的博客进行总结.]]></content>
       <categories>
-        <category>好笑</category>
-        <category>wunai</category>
+        <category>webpack</category>
       </categories>
       <tags>
-        <tag>搞笑</tag>
+        <tag>webpack</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[我的第一篇博客]]></title>
-    <url>%2F2019%2F04%2F18%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[代码块12345&lt;script&gt; document.onload = function()&#123; alert(&apos;来坐下来喝一杯~~对~~喝一杯&apos;); &#125;;&lt;/script&gt; 文章块 姓名 技能 排行 大脑斧 卖萌 老大 就是前面的那个颜色 markdown语法实验块 应用 blah blah blah 列表 1.列表内容 2.列表内容 列表 a.ni 百度 :http://baidu.com]]></content>
+    <url>%2F2019%2F01%2F18%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[代码块12345&lt;script&gt; window.onload = function()&#123; alert(&apos;来坐下来喝一杯~~对~~喝一杯&apos;); &#125;;&lt;/script&gt; 文章块 姓名 技能 排行 大脑斧 卖萌 老大 就是前面的那个颜色 markdown语法实验块 应用 blah blah blah 列表 1.列表内容 2.列表内容 列表 a.ni 百度 :http://baidu.com]]></content>
       <categories>
         <category>各种第一</category>
       </categories>
