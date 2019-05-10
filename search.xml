@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vuecli3项目]]></title>
+    <url>%2F2019%2F05%2F10%2Fvuecli3%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[这是一个基于vue-cli3搭建的vue登陆管理项目查看源代码请点这里 第一步 ~~ 项目前准备和vuecli3配置 1.下载第三方依赖和插件后端数据交互axios;表单校验vee-validate;百度图形化组件库Echar;mint-ui组件库；hotcss解决px和rem转换；其他的vuecli3都配好了2.使用vuecli3的图形界面配置项目，命令行vue ui打开图形界面，开始创建项目，项目配置手动选上vuex,vue-router,node-sass,和Elist语法限制，npm;然后直接点击运行和启动app就好。3.用nodejs自己编写后端数据接口，用cors解决跨域问题，express框架进行服务器和路由的搭建，最后node启动该文件； 第二步 ~~ 对进来时的登陆组件编写结构划分为三部分1.顶部和下面的椭圆长块，很简单两个div搞定2.中间部分3个div里面放3个input:number，这里用vee-validate，在入口文件中导入使用，然后在div中用v-validate指令就好，然后记住密码和自动登陆的功能实现，直接来个类绑定就好，之中进行逻辑判断，记住密码就把数据存在localstroage中，自动登陆就在mounted时localstroage中取出数据，并自动触发底部的登陆3.底部点击登陆时，要校验一遍this.errors.any()，然后把登陆成功登陆信息储存到localstroage和vuex中并跳转到home组件，加载时动画使用mint-ui的Toast，提示信息用Indicator,入口文件中导入引用还有样式导入，给个setTimeout模拟超时，并用axios的post请求将数据提交给后台 第三步 ~~ 对home组件进行编写结构划分为三部分1.顶部都是由回退，中间内容，右侧跳转组成，那么将顶部封装成组件；回退直接this.$router.go(-1)；2.中间将圆形数据图封装成组件，写3个，使用Echars上面的代码复制过来数据写成自定义的变量，之中的数据使用axios去请求后台的数据，将数据记录到变量中，记得在用到对应的三方依赖组件中导入引用3.底部的九宫格，自己用伸缩盒子布局一下，然后一格封装成组件，再v-for里面写该组件，每个组件点击可跳转到对应的路由组件，之后编写这些组件 第四步 ~~ 后续的完善和问题。。完善。。1.sass有许多相同的，如颜色和字号把他们写成变量，写道mian.sass中之后将该文件在vue.config.js中配置下，还有许多相同的代码块@mixin提取出来，用@include来引用。2.在入口文件中添加路由的全局守卫router.beforeEach，防止用户没有登陆，直接通过/home访问后面的主页123456789101112router.beforeEach((to, from, next) =&gt; &#123; //路由的全局守卫 if (to.path != &quot;/&quot;) &#123; if (helper.gettype(store.getters.getloginuser) === &quot;Object&quot;) &#123; next(); &#125; else &#123; next(&quot;/&quot;); &#125; &#125; else &#123; next(); &#125;&#125;); 3.代码上传github,编写自己的博客进行总结.。。问题。。1.用vuecli3之后发现配置文件已经有许多不懂的了，要多看看官方文档2.注册组件没有编写3.没有将数据通过node的mongoose连接数据库mongedb储存]]></content>
+      <categories>
+        <category>vuecli3</category>
+      </categories>
+      <tags>
+        <tag>vuecli3</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[webpack项目]]></title>
     <url>%2F2019%2F05%2F06%2Fwebpack%E9%A1%B9%E7%9B%AE%2F</url>
     <content type="text"><![CDATA[这是一个基于webpack搭建的vue手机商城项目查看源代码请点这里 第一步 ~~ 项目前准备和文件配置-1-下载项目需要用到的三方依赖和插件vue全家桶;ui组件库mui,mint-ui;各种文件对应的loader；webpack打包工具；以及用webpack-dev-server来自动保存打包由于要在我自己手机上进行测试和书写方便，需要配置下package.json文件。-2-编写webpack的配置文件，基于webpack一切皆模块的思想，每当出现新类型文件，就需要配置loader 第二步 ~~ 对项目进行构建-1-把app组件界面分为3个部分，顶部使用mint-ui的header，在入口文件中导入引用就好，底部的导航用mui中的tabber，在入口文件中导入样式，把代码复制到app组件中把a标签改成router-link连接路由，而中间放这些组件就可以了，但是后期需要动画，就如下写。123&lt;transition&gt; &lt;router-view&gt;&lt;/router-view&gt;&lt;/transition&gt; -2-进来时app组件的根路由直接改成home组件，home组件上面为mint-ui轮播图，图片数据用vue-resource请求，入口文件导入引用resource，下面为mui九宫格。以后无非是组件的切换了和细节的完善，整个项目构建完了。 第三步 ~~ home组件后续的各个组件和路由配置-1-入口文件导入vue-router，vue实列中挂载和引用router.js的暴露，在router.js中导入各个组件进行路由和组件的匹配； 2-各个组件的编写 1.实现点击home组件的小米手机，出现一系列小米手机图片价格参考，其实就是Home组件的子路由匹配一个组件。 2.实现点击子组件的图片，出现该款手机的具体参数，且在里面添加购买功能，点击购买产品添加至购物车组件。第四步 ~~ 购物组件和后续的完善-购物车组件的编写-1.不同组件通过vuex来实现数据共享，为了实现数据持久化配合localstroage，入口文件导入挂载vuex，购物车组件取出vuex中的数据进行编写，在这里用v-if来实现当用户添加进来了，就切换到另一个组件。2.实现，商品的数量控制，商品的删除，是非购买的选项，总价的动态计算。 完善 1.不同组件的切换，编写css实现动画滑动效果。 2.底部导航条可以换好看的字体图标。 3.代码上传github,编写自己的博客进行总结.]]></content>
